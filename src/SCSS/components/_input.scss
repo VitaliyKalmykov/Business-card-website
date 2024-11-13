@@ -12,8 +12,8 @@
         width: 100%;
         outline: none;
         text-align: center;
-        background-color: white;
-        border: 1px solid black;
+        background-color: var(--color-primary-dark);
+        border-color: transparent;
         color: var(--color-brand-dark);
       } 
     
@@ -31,7 +31,7 @@
         width: 100%;
         height: 100%;
         //color
-        color: black;
+        color: var(--color-background-dark);
       }
 
       &__element:focus + &__label, .input__label--active {

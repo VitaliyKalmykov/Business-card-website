@@ -40,7 +40,12 @@
     width: 100%;
     padding: 10px 10px;
     border-radius: 10px;
+    background-color: var(--color-primary-dark);
   }
+  &__textarea::placeholder {
+    color: var(--color-background-dark);
+  }
+
   &__textarea__remaining {
     color: black;
     position: absolute;
