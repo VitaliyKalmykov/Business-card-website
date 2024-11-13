@@ -1,0 +1,89 @@
+.contact-section {
+  padding-top: 20px;
+  &__contact-wrap {
+    padding-top: 20px;
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    @media screen and (min-width: $bp-desktop) {
+        padding-top: 200px;
+        flex-direction: row;
+    }
+  }
+  &__direct-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: max-content; 
+    margin: 0 auto; 
+    text-align: center;
+}
+  &__form {
+    width: 100%;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    @media screen and (min-width: $bp-desktop) {
+      padding-top: 40px;
+    }
+  }
+
+  &__textarea-wrapper {
+    position: relative;
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+  }
+  &__textarea__remaining {
+    color: black;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 15px;
+  }
+  &__textarea--is-full {
+    color: red;
+  }
+  &__error-message {
+    position: absolute;
+    font-size: 15px;
+    color: red;
+    margin: 0;
+    padding: 0;
+  }
+  &__error-message:nth-child(1) {
+    top: 30px;
+    left: 50px;
+  }
+
+  &__contact-button {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  &__contact-svg {
+    width: 100%;
+    height: 100%;
+  }
+  &__direct-list &__direct-item:nth-child(1) svg {
+    fill: #0a66c2; 
+}
+&__direct-list &__direct-item:nth-child(2) svg {
+  fill: #0a66c2; 
+}
+&__direct-list &__direct-item:nth-child(3) svg {
+  fill: var(--color-primary-dark);
+}
+&__direct-list &__direct-item:nth-child(4) svg {
+  fill: green;
+}
+} 

@@ -1,0 +1,136 @@
+.header {
+
+    &__container,
+    &__nav-list,
+    &__burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    //header-container
+    &__container {
+        padding: 10px;
+    }
+
+
+    //navigation 
+    &__nav {
+       display: none;
+        @media screen and (min-width: $bp-desktop) {
+
+            display: flex;
+            
+            flex-grow: 1;
+        }
+    }
+
+   //navigation-list
+    &__nav-list {
+         font-size: 24px ;
+
+        justify-content: center;
+        
+        gap: 10%;
+        
+        flex-grow: 1;
+    }
+
+    &__svg-button {
+        width: 24px;
+        height: 24px;
+
+        cursor: pointer;
+        
+        background-color: transparent;
+        border: none;
+
+        fill: var(--color-primary-dark);
+        
+        z-index: 1000;
+    }
+
+    // Burger menu
+    &__burger-menu {
+        width: 40px;
+        height: 40px;
+        
+        background-color: transparent;
+        border: none;
+        
+        cursor: pointer;
+        
+        flex-direction: column;
+        justify-content: center;
+        
+        overflow: hidden;
+ 
+
+        z-index: 1000;
+
+        > div {
+            background-color: var(--color-brand-dark);
+            width: 100%;
+            height: 1%;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            display: none;
+        }
+    }
+    &__burger-menu--cross {
+        > div:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
+        }
+        > div:nth-child(2) {
+            transform: translateY(30px);
+        }
+        > div:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+
+    //mobile-sidebar
+    &__sidebar {
+        position: fixed;
+       
+        right: -100%; 
+        width: 100%;
+        height: 100%;
+     
+        background-color: var(--color-background-dark);
+
+        overflow: hidden;
+
+        transition: right 0.3s ease;
+        z-index: 999;
+        @media screen and (min-width: $bp-desktop) {
+            display: none;
+        }
+      }
+
+      //click on burger menu
+      &__sidebar--open {
+        right: 0; 
+        top: 0;
+      }
+
+      &__sidebar--open > nav {
+        visibility: visible;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+      } 
+
+}

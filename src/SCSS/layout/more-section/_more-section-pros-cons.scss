@@ -1,0 +1,252 @@
+.more-section {
+ 
+  padding-top: 20px;
+
+  &__pros-cons-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: height 0.3s ease-in-out;
+
+    @media screen and (min-width: $bp-desktop) {
+      height: 570px;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    &.active {
+      height: 450px;
+      @media screen and (min-width: $bp-desktop) {
+        height: 360px;
+      }
+    }
+  }
+
+  &__svg-button {
+    position: absolute;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    fill: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+  &__pros,
+  &__cons {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+      position: relative;
+
+    }
+  }
+
+  &__pros ul, &__cons ul {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__pros li,
+  &__cons li {
+    position: absolute;
+    border-radius: 9px;
+    width: 180px;
+    height: 160px;
+    padding: 15px;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+    text-align: start;
+    color: var(--color-brand-dark);
+    @media screen and (min-width: $bp-desktop) {
+      width: 300px;
+      height: 230px;
+      font-size: 24px;
+      border-radius: 18px;
+      padding: 20px;
+      text-align: start;
+    }
+  }
+
+  &__pros-cons-title {
+    text-align: center;
+    text-wrap: nowrap;
+    padding-bottom: 25px;
+    @media screen and (min-width: $bp-desktop) {
+      padding-bottom: 0;
+
+    }
+  }
+
+  &__pros li {
+    background-color: var(--color-primary-dark);
+    box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.5), 0px 1px 3px rgba(255, 255, 255, 0.1);
+  }
+
+  &__cons li {
+    background-color: var(--color-secondary-dark);
+    box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.5), 0px 1px 3px rgba(255, 255, 255, 0.1);
+
+  }
+
+  &__pros li {
+    @media screen and (min-width: $bp-desktop) {
+      &:nth-child(1) {
+        top: 30px;
+        left: 20px;
+      }
+      &:nth-child(2) {
+        top: 100px;
+        right: 2px;
+      }
+      &:nth-child(3) {
+        top: 250px;
+        left: 25px;
+      }
+      &:nth-child(4) {
+        top: 320px;
+        right: 0;
+      }
+    }
+  }
+
+  &__cons li {
+    @media screen and (min-width: $bp-desktop) {
+      &:nth-child(1) {
+        top: 40px;
+        right: 10px;
+      }
+      &:nth-child(2) {
+        top: 80px;
+        left: 10px;
+      }
+      &:nth-child(3) {
+        top: 285px;
+        left: 20px;
+      }
+
+      &:nth-child(4) {
+        top: 250px;
+        right: 0;
+      }
+    }
+  }
+
+  // Позиціонування та трансформація li у pros list
+  &__pros-list li {
+    @media screen and (min-width: $bp-desktop) {
+      &:nth-child(1) {
+        transform: translateX(45%) translateY(10%);
+      }
+      &:nth-child(2) {
+        transform: translateX(-44%) translateY(-20%);
+      }
+      &:nth-child(3) {
+        transform: translateX(43%) translateY(-86%);
+      }
+      &:nth-child(4) {
+        transform: translateX(-45%) translateY(-116%);
+      }
+    }
+  }
+
+  // Позиціонування та трансформація li у cons list
+  &__cons-list li {
+    @media screen and (min-width: $bp-desktop) {
+      &:nth-child(1) {
+        transform: translateX(-36%) translateY(5%);
+      }
+      &:nth-child(2) {
+        transform: translateX(53%) translateY(-12%);
+      }
+      &:nth-child(3) {
+        transform: translateX(50%) translateY(-101%);
+      }
+      &:nth-child(4) {
+        transform: translateX(-40%) translateY(-86%);
+      }
+    }
+  }
+
+  &__pros-item--active,
+  &__cons-item--active {
+    z-index: 50;
+  }
+
+  // Кнопки pros і cons
+  &__svg-button-pros--left,
+  &__svg-button-pros--right {
+    z-index: 99;
+    top: 100px;
+    @media screen and (min-width: $bp-desktop) {
+      top: 150px;
+    }
+  }
+
+  &__svg-button-pros--left {
+    left: 0px;
+    transform: rotate(180deg);
+    border-color: var(--color-secondary-dark);
+    fill: var(--color-primary-dark);
+    @media screen and (min-width: $bp-desktop) {
+      left: 100px;
+    }
+  }
+
+  &__svg-button-pros--right {
+    right: 0px;
+    border-color: var(--color-secondary-dark);
+    fill: var(--color-primary-dark);
+    @media screen and (min-width: $bp-desktop) {
+      left: 470px;
+    }
+  }
+
+  &__svg-button-cons--left,
+  &__svg-button-cons--right {
+    border-color: var(--color-secondary-dark);
+    fill: var(--color-primary-dark);
+    top: 320px;
+    z-index: 99;
+    @media screen and (min-width: $bp-desktop) {
+      top: 150px;
+    }
+  }
+
+  &__svg-button-cons--left {
+    right: 0px;
+    @media screen and (min-width: $bp-desktop) {
+      right: 70px;
+    }
+  }
+
+  &__svg-button-cons--right {
+    left: 0px;
+    transform: rotate(180deg);
+    @media screen and (min-width: $bp-desktop) {
+      left: 730px;
+    }
+  }
+
+  &__button {
+    visibility: hidden;
+    @media screen and (min-width: $bp-desktop) {
+      visibility: visible;
+    }
+  }
+}

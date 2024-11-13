@@ -1,0 +1,64 @@
+.hard-skills-section {
+    padding-top: 20px;
+    &__current-technologies {
+        margin-top: 20px;
+    }
+    &__current-item {
+        padding: 5px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        margin: 10px auto;
+        border-radius: 18px;
+        font-weight: 600;
+        @media screen and (min-width: $bp-desktop) {
+            padding: 20px 20px;
+            gap: 50px;
+            width: 100%;
+        }
+    }
+    &__details {
+        display: none;
+    }
+    &__image {
+        width: 100px;
+        @media screen and (min-width: $bp-desktop) {
+            width: 170px;
+        }
+    }
+    &__second-image {
+        width: 100px;
+        @media screen and (min-width: $bp-desktop) {
+            width: 170px;
+        }
+    }
+    &__current-item:hover &__image, &__current-item:hover &__second-image {
+        display: none;
+    }
+    &__current-item:hover &__details {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+        flex-grow: 1;
+
+        @media screen and (min-width: $bp-desktop) {
+            font-size: 18px;
+            gap: 50px;
+            flex-direction: row;
+        }
+    }
+
+    &__current-item:nth-child(1) {
+        background: linear-gradient(90deg, #f16529, #e44d26);
+    }
+    &__current-item:nth-child(2) {
+        background: linear-gradient(90deg, #be608b, #2277ff);
+    }
+    &__current-item:nth-child(3) {
+        background: linear-gradient(90deg, #00cbfe, #dcbc05,#dcbc05 );
+    }
+}

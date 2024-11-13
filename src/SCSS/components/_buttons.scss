@@ -1,0 +1,16 @@
+.buttons {
+    padding: 15px 15px;
+    border-radius: 18px;
+    font-size: 15px;
+    background-color: var(--color-background-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-primary-dark);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    box-shadow: 12px 24px 12px rgba(0, 0, 0, 0.4), 0px 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.buttons:hover {
+    background-color: var(--color-primary-dark);
+    color: var(--color-brand-dark);
+}

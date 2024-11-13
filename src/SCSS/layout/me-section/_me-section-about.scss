@@ -1,0 +1,83 @@
+.me-section {
+
+  &__about-container {
+    position: relative;
+
+    //container for containers of "about part"
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 5px;
+    height: 230px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      height: 300px;
+      gap: 10px;
+    }
+  }
+
+  &__about-hobby,
+  &__about-work,
+  &__about-plans {
+    //container's of "about" part
+    height: 100%;
+    width: 100%;
+    //flex
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    padding: 5px 5px;
+
+    //transition
+    transition: all 1s ease;
+
+    background-color: var(--color-primary-dark);
+    color: var(--color-brand-dark);
+
+    @media screen and (min-width) {
+      padding: 10px 10px;
+      justify-content: space-between;
+    }
+  }
+  &__about-hobby:hover,
+  &__about-work:hover,
+  &__about-plans:hover {
+    //hover scale + width
+    position: absolute;
+    flex-direction: column;
+    font-weight: 600;
+    transform: scale(1.1);
+    z-index: 50;
+    gap: 10px;
+    @media screen and (min-width: $bp-desktop) {
+      gap: 20px;
+    }
+  }
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 10px;
+    }
+  }
+  &__info-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__gif {
+    width: 40px;
+    height: 40px;
+    @media screen and (min-width: $bp-desktop) {
+      width: 60px;
+    height: 60px;
+    }
+  }
+}
